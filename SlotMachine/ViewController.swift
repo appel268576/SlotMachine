@@ -113,6 +113,7 @@ class ViewController: UIViewController {
     
     func setupThirdContainer(containerView: UIView) {
         
+        // credits label
         self.creditsLabel = UILabel()
         self.creditsLabel.text = "000000"
         self.creditsLabel.textColor = UIColor.redColor()
@@ -142,14 +143,14 @@ class ViewController: UIViewController {
         self.winnerPaidLabel.sizeToFit()
         self.winnerPaidLabel.center = CGPoint(x: containerView.frame.width * kSixth * 5, y: containerView.frame.height * kThird)
         self.winnerPaidLabel.textAlignment = NSTextAlignment.Center
-        self.winnerPaidLabel.textColor = UIColor.darkGrayColor()
+        self.winnerPaidLabel.backgroundColor = UIColor.darkGrayColor()
         containerView.addSubview(self.winnerPaidLabel)
         
         // credits title label
         self.creditsTitleLabel = UILabel()
         self.creditsTitleLabel.text = "Credits"
         self.creditsTitleLabel.textColor = UIColor.blackColor()
-        self.creditsTitleLabel.font = UIFont(name: "American-Typewriter", size: 14)
+        self.creditsTitleLabel.font = UIFont(name: "American Typewriter", size: 14)
         self.creditsTitleLabel.sizeToFit()
         self.creditsTitleLabel.center = CGPoint(x: containerView.frame.width * kSixth, y: containerView.frame.height * kThird * 2)
         containerView.addSubview(self.creditsTitleLabel)
@@ -158,7 +159,7 @@ class ViewController: UIViewController {
         self.betTitleLabel = UILabel()
         self.betTitleLabel.text = "Bet"
         self.betTitleLabel.textColor = UIColor.blackColor()
-        self.betTitleLabel.font = UIFont(name: "American-Typewriter", size: 14)
+        self.betTitleLabel.font = UIFont(name: "American Typewriter", size: 14)
         self.betTitleLabel.sizeToFit()
         self.betTitleLabel.center = CGPoint(x: containerView.frame.width * kSixth * 3, y: containerView.frame.height * kThird * 2)
         containerView.addSubview(self.betTitleLabel)
@@ -167,7 +168,7 @@ class ViewController: UIViewController {
         self.winnerPaidTitleLabel = UILabel()
         self.winnerPaidTitleLabel.text = "Winner Paid"
         self.winnerPaidTitleLabel.textColor = UIColor.blackColor()
-        self.winnerPaidTitleLabel.font = UIFont(name: "American-Typewriter", size: 14)
+        self.winnerPaidTitleLabel.font = UIFont(name: "American Typewriter", size: 14)
         self.winnerPaidTitleLabel.sizeToFit()
         self.winnerPaidTitleLabel.center = CGPoint(x: containerView.frame.width * kSixth * 5, y: containerView.frame.height * kThird * 2)
         containerView.addSubview(self.winnerPaidTitleLabel)
