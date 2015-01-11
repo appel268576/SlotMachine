@@ -63,6 +63,10 @@ class ViewController: UIViewController {
     func resetButtonPressed(button: UIButton) {
         println("Reset button pressed")
     }
+    
+    func betOneButtonPressed(button: UIButton) {
+        println("Bet one button pressed")
+    }
 
     func setupContainerViews() {
         // set up first container
@@ -193,6 +197,7 @@ class ViewController: UIViewController {
     }
     
     func setupFourthContainer(containerView:UIView) {
+        // reset button
         self.resetButton = UIButton()
         self.resetButton.setTitle("Reset", forState: UIControlState.Normal)
         self.resetButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
@@ -202,6 +207,18 @@ class ViewController: UIViewController {
         self.resetButton.center = CGPoint(x: containerView.frame.width * kEigth, y: containerView.frame.height * kHalf)
         self.resetButton.addTarget(self, action: "resetButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         containerView.addSubview(self.resetButton)
+        
+        // bet one button
+        self.betOneButton = UIButton()
+        self.betOneButton.setTitle("Bet one", forState: UIControlState.Normal)
+        self.betOneButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        self.betOneButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
+        self.betOneButton.backgroundColor = UIColor.greenColor()
+        self.betOneButton.sizeToFit()
+        self.betOneButton.center = CGPoint(x: containerView.frame.width * 3 * kEigth, y: containerView.frame.height * kHalf)
+        self.betOneButton.addTarget(self, action: "betOneButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        containerView.addSubview(self.betOneButton)
+        
     }
     
     
