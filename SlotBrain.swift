@@ -43,7 +43,7 @@ class SlotBrain {
         var winnings = 0
         
         var flushWinCount = 0
-        var ThreeOfAKindWinCount = 0
+        var threeOfAKindWinCount = 0
         var straightWinCount = 0
         
         for slotRow in slotsInRows {
@@ -54,9 +54,15 @@ class SlotBrain {
             }
             
             if checkThreeInARow(slotRow) {
-                println(" three in a row")
+                println("Three in a row")
                 winnings += 1
                 straightWinCount += 1
+            }
+            
+            if checkThreeOfAKind(slotRow) {
+                println("hree of a kind")
+                winnings += 3
+                threeOfAKindWinCount += 1
             }
         }
         
@@ -68,6 +74,11 @@ class SlotBrain {
         if straightWinCount == 3 {
             println("Epic straight")
             winnings += 1000
+        }
+        
+        if threeOfAKindWinCount == 3 {
+            println("Threes all round")
+            winnings += 50
         }
         
         return winnings
@@ -98,6 +109,19 @@ class SlotBrain {
             return true
         }
         else if slot1.value == slot2.value + 1 && slot1.value == slot3.value + 2 {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
+    class func checkThreeOfAKind(slotRow: [Slot]) -> Bool {
+        let slot1 = slotRow[0]
+        let slot2 = slotRow[1]
+        let slot3 = slotRow[2]
+        
+        if slot1.value == slot2.value && slot1.value == slot3.value {
             return true
         }
         else {
